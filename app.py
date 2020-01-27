@@ -21,11 +21,6 @@ def home():
             <h1>Heart Disease Prediction<h1>
             </body>"""
 
-@app.route("/page")
-def page():
-    with open("page.html","r") as viz_file:
-        return viz_file.read()
-
 @app.route("/predict",methods=["GET"])
 def predict():
     thal=flask.request.args["thal"]
